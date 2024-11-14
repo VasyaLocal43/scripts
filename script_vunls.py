@@ -15,7 +15,7 @@ protocol = options.protocol
 
 # Safe execution of commands with subprocess.run()
 nmap_command = f"sudo nmap {ip} -p{port} -sV -sC --script=firewall-bypass,http-favicon,http-passwd,http-dombased-xss,http-auth,http-sql-injection,http-enum,exploit,vuln,http-fileupload-exploiter"
-whatweb_command = f"whatweb -a 4 {protocol}://{ip}"
+whatweb_command = f"whatweb -a 3 {protocol}://{ip}"
 nikto_command = f"nikto -h {ip} -p {port}"
 
 
